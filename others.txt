@@ -1,0 +1,10 @@
+pip install requests
+pip install python-dotenv
+pip install Flask
+pip install waitress
+
+
+#creating and opening virtual environment
+#python -m venv .venv
+#Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser (If needed)
+#.venv\Scripts\activate
