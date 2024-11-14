@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title or "City" }} Weather</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <main id="main2">
+      <h1>{{ title or "City" }} Weather Conditions</h1>
+      <p>
+        {{ status }} and {{ temp }} &deg;C, Feels like {{ feels_like }} &deg;C
+      </p>
+
+      <form action="/weather" method="get">
+        <input
+          type="text"
+          name="city"
+          id="city"
+          placeholder="Enter a city"
+          required
+        />
+        <button type="submit">Get Weather</button>
+      </form>
+    </main>
+    <footer id="footer">
+      <h3>
+        Made by:
+        <a href="https://github.com/NasimRanaFeroz">Nasim Rana Feroz</a>
+      </h3>
+    </footer>
+  </body>
+</html>
