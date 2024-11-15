@@ -1,19 +1,25 @@
 import requests
 from dotenv import load_dotenv
 import os
-from pprint import pprint 
 
 load_dotenv()
 
 def get_current_weather(city="Dhaka"):
-    req_url = f'https://api.openweathermap.org/data/2.5/weather?appid={os.getenv("API_KEY")}&q={city}&units=metric'
-
     if not bool(city.strip()):
         city = "Dhaka"
-
-    weather_data = requests.get(req_url).json()
-    return weather_data
+    
+    # Construct the request URL
+    api_key = os.getenv("API_KEY")
+    req_url = f'https://api.openweathermap.org/data/2.5/weather?appid={api_key}&q={city}&units=metric'
+    
+    response = requests.get(req_url)
+    if response.status_code == 200:
+        return response.json()
+    else:
+        return None 
 
 if __name__ == '__main__':
+    # For local testing purposes
+    from pprint import pprint
     current_weather = get_current_weather()
-    pprint(current_weather) 
+    pprint(current_weather)
