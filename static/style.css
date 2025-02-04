@@ -3,13 +3,15 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
   overflow: scroll;
   text-align: center;
   background-color: #1a1a3bfc;
+  min-height: 100vh;
+  background-image: url('./bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-
 #main {
   padding: 2rem;
   background-color: #1a1a3bfc;
@@ -23,7 +25,6 @@ body {
   font-size: 2rem;
   padding-bottom: 6rem;
 }
-
 #main2 {
   padding: 2rem;
   background-color: #1a1a3bfc;
@@ -37,54 +38,38 @@ body {
   font-size: 2rem;
   padding-bottom: 6rem;
 }
-
 input,
 button {
   font-size: 2rem;
   padding: 1rem;
   border-radius: 10px;
 }
-
 a {
   color: white;
 }
 a:hover {
   color: aqua;
 }
-
 main {
   flex: 1;
 }
-
-#footer {
-  text-align: center;
-  padding: 1rem;
-  background-color: #05082a;
-  color: #ffffff;
-  width: 100%;
-}
-
 @media (max-width: 700px) {
   #main {
     font-size: 1rem;
     min-height: 93vh;
     padding-bottom: 10rem;
   }
-
   #main2 {
     font-size: 1rem;
     min-height: 93vh;
     padding-bottom: 10rem;
   }
-
   h1 {
     font-size: 1.5rem;
   }
-
   p {
     font-size: 1rem;
   }
-
   input,
   button {
     font-size: 1rem;
